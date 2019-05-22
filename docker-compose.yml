@@ -1,10 +1,27 @@
-version: '3'
+version: "3"
 
 services:
-  simple-flask-react-template:
-    build: .
-    container_name: simple-flask-react-template
+
+  # Create container for backend api
+  backend:
+    image: backend-api
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: "backend-api"
+    volumes:
+        - ./backend:/app
     ports:
       - "5000:5000"
-    env_file:
-      - .dev.env
+
+  # Create container for frontend app
+  frontend:
+    image: frontend-react
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: "frontend-react"
+    volumes:
+        - ./frontend:/app
+    ports:
+      - "3000:3000"

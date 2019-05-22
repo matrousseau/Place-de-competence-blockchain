@@ -1,12 +1,11 @@
-# Flask-React Docker Template
+# Flask API Template
 
-This project is a web app built with Python backend and ReactJS frontend to be used as a starter template.
+This project is a web app built with Python and Flask to be used as a starter template.
 
 ## Built With
 
 * [Python 3](https://www.python.org/)
 * [Flask](http://flask.pocoo.org/)
-* [React](https://reactjs.org/)
 * [Docker](https://www.docker.com/)
 
 ## Prerequisites
@@ -15,7 +14,6 @@ You will need the following things properly installed on your computer:
 
 * [Git](http://git-scm.com/)
 * [Python 3](https://www.python.org/)
-* [React](https://reactjs.org/)
 * [Docker](https://www.docker.com/)
 
 ## Installation
@@ -27,17 +25,15 @@ You will need the following things properly installed on your computer:
 To run the project locally follow the following steps:
 
 * change into the project directory
-* `docker-compose up`
+* `docker build -t backend-api .`
+* `docker run -p 5000:5000 -v /HOST/PATH/TO/BACKEND/FOLDER:/app backend-api`
 
-## Backend
+## JSON API
 
-Flask for the backend API (default port `5000`)
-For more information see the README.md file in the backend directory
+The JSON API is a test endpoint to start development
 
-## Frontend
-
-React for the frontend (default port `3000`)
-For more information see the README.md file in the frontend directory
+* `http://localhost:5000/api/test`
+(returns a test json response)
 
 ## License
 
