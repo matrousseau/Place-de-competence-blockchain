@@ -2,67 +2,52 @@ import React from 'react';
 import { Button, ButtonToolbar } from 'reactstrap';
 import { Field, reduxForm } from 'redux-form';
 import PropTypes from 'prop-types';
-import renderSelectField from '../../../../shared/components/form/Select';
+import renderMultiSelectField from '../../../../shared/components/form/MultiSelect';
 
 const WizardFormTwo = ({ handleSubmit, previousPage }) => (
   <form className="form form--horizontal wizard__form" onSubmit={handleSubmit}>
-    <h3 className="wizard__title">What’s your address</h3>
+    <h3 className="wizard__title">Votre mission</h3>
     <div className="form__form-group">
-      <span className="form__form-group-label">Country</span>
+      <span className="form__form-group-label">Titre du projet</span>
       <div className="form__form-group-field">
         <Field
-          name="country"
-          component={renderSelectField}
+          name="titre"
+          component="input"
           type="text"
+          placeholder="Titre du projet"
+        />
+      </div>
+    </div>
+    <div className="form__form-group">
+      <span className="form__form-group-label">Compétences</span>
+      <div className="form__form-group-field">
+        <Field
+          name="multiSelect"
+          component={renderMultiSelectField}
           options={[
-            { value: 'one', label: 'One' },
-            { value: 'two', label: 'Two' },
+            { value: '1', label: 'Python' },
+            { value: '2', label: 'OVH' },
+            { value: '3', label: 'Architecture de SI' },
+            { value: '4', label: 'Management' },
+            { value: '5', label: 'Marketing' },
+            { value: '6', label: 'Graphisme' },
           ]}
-          placeholder="Select country"
         />
       </div>
     </div>
     <div className="form__form-group">
-      <span className="form__form-group-label">City</span>
+      <span className="form__form-group-label">Nombre de personnes requises</span>
       <div className="form__form-group-field">
         <Field
-          name="city"
+          name="nombre"
           component="input"
-          type="text"
-          placeholder="City name"
-        />
-      </div>
-    </div>
-    <div className="form__form-group form__form-group--address">
-      <span className="form__form-group-label">Address</span>
-      <div className="form__form-group-field">
-        <Field
-          name="street_name"
-          component="input"
-          type="text"
-          placeholder="Street name"
-        />
-        <Field
-          name="building"
-          component="input"
-          type="text"
-          placeholder="Building"
-        />
-      </div>
-    </div>
-    <div className="form__form-group">
-      <span className="form__form-group-label">ZIP Code</span>
-      <div className="form__form-group-field">
-        <Field
-          name="zip"
-          component="input"
-          type="text"
+          type="int"
         />
       </div>
     </div>
     <ButtonToolbar className="form__button-toolbar wizard__toolbar">
-      <Button color="primary" type="button" className="previous" onClick={previousPage}>Back</Button>
-      <Button color="primary" type="submit" className="next">Next</Button>
+      <Button color="primary" type="button" className="previous" onClick={previousPage}>Retour</Button>
+      <Button color="primary" type="submit" className="next">Suivant</Button>
     </ButtonToolbar>
   </form>
 );

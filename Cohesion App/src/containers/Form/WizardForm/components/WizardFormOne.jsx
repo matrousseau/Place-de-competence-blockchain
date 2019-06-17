@@ -1,7 +1,6 @@
 import React, { PureComponent } from 'react';
 import { Button, ButtonToolbar } from 'reactstrap';
 import { Field, reduxForm } from 'redux-form';
-import EyeIcon from 'mdi-react/EyeIcon';
 import PropTypes from 'prop-types';
 
 class WizardFormOne extends PureComponent {
@@ -23,19 +22,18 @@ class WizardFormOne extends PureComponent {
 
   render() {
     const { handleSubmit } = this.props;
-    const { showPassword } = this.state;
 
     return (
       <form className="form form--horizontal wizard__form" onSubmit={handleSubmit}>
-        <h3 className="wizard__title">Fill your personal data</h3>
+        <h3 className="wizard__title">Quelques informations sur vous.</h3>
         <div className="form__form-group">
-          <span className="form__form-group-label">Username</span>
+          <span className="form__form-group-label">Nom</span>
           <div className="form__form-group-field">
             <Field
               name="username"
               component="input"
               type="text"
-              placeholder="Name"
+              placeholder="Nom"
             />
           </div>
         </div>
@@ -46,42 +44,24 @@ class WizardFormOne extends PureComponent {
               name="email"
               component="input"
               type="email"
-              placeholder="example@mail.com"
+              placeholder="exemple@mail.com"
             />
           </div>
         </div>
         <div className="form__form-group">
-          <span className="form__form-group-label">Url</span>
+          <span className="form__form-group-label">Entité</span>
           <div className="form__form-group-field">
             <Field
-              name="url"
+              name="Entité"
               component="input"
-              type="url"
-              placeholder="https://themeforest.net"
+              type="Entite"
+              placeholder="Entite"
             />
-          </div>
-        </div>
-        <div className="form__form-group">
-          <span className="form__form-group-label">Password</span>
-          <div className="form__form-group-field">
-            <Field
-              name="password"
-              component="input"
-              type={showPassword ? 'text' : 'password'}
-              placeholder="Password"
-            />
-            <button
-              type="button"
-              className={`form__form-group-button${showPassword ? ' active' : ''}`}
-              tabIndex="-1"
-              onClick={e => this.showPassword(e)}
-            ><EyeIcon />
-            </button>
           </div>
         </div>
         <ButtonToolbar className="form__button-toolbar wizard__toolbar">
-          <Button color="primary" type="button" disabled className="previous">Back</Button>
-          <Button color="primary" type="submit" className="next">Next</Button>
+          <Button color="primary" type="button" disabled className="previous">Retour</Button>
+          <Button color="primary" type="submit" className="next">Suivant</Button>
         </ButtonToolbar>
       </form>
     );

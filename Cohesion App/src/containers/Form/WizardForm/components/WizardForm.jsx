@@ -35,9 +35,9 @@ export default class WizardForm extends PureComponent {
           <Card>
             <div className="wizard">
               <div className="wizard__steps">
-                <div className={`wizard__step${page === 1 ? ' wizard__step--active' : ''}`}><p>Step 1</p></div>
-                <div className={`wizard__step${page === 2 ? ' wizard__step--active' : ''}`}><p>Step 2</p></div>
-                <div className={`wizard__step${page === 3 ? ' wizard__step--active' : ''}`}><p>Step 3</p></div>
+                <div className={`wizard__step${page === 1 ? ' wizard__step--active' : ''}`}><p>Étape 1</p></div>
+                <div className={`wizard__step${page === 2 ? ' wizard__step--active' : ''}`}><p>Étape 2</p></div>
+                <div className={`wizard__step${page === 3 ? ' wizard__step--active' : ''}`}><p>Étape 3</p></div>
               </div>
               <div className="wizard__form-wrapper">
                 {page === 1 && <WizardFormOne onSubmit={this.nextPage} />}
