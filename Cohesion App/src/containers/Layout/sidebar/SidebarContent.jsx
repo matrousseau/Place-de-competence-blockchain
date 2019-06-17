@@ -16,10 +16,11 @@ class SidebarContent extends Component {
     return (
       <div className="sidebar__content">
         <ul className="sidebar__block">
-          <SidebarLink title="Mon Profil" route="/account/profile" onClick={this.hideSidebar} />
+          <SidebarLink title="Mes Projets" route="/default_pages/mes_projets" onClick={this.hideSidebar} />
           <SidebarLink title="Proposer mon aide" route="/default_pages/project_summary" onClick={this.hideSidebar} />
-          <SidebarLink title="Bourse aux compétences" route="/e-commerce/catalog" onClick={this.hideSidebar} />
-          <SidebarLink title="Map des entités" route="/dashboard_default" onClick={this.hideSidebar} />
+          <SidebarLink title="Demander de l'aide" route="/default_pages/project_summary" onClick={this.hideSidebar} />
+          <SidebarLink title="Place des compétences" route="/e-commerce/catalog" onClick={this.hideSidebar} />
+          <SidebarLink title="Mon entité" route="/dashboard_default" onClick={this.hideSidebar} />
         </ul>
         <ul className="sidebar__block">
           <SidebarLink title="Déconnexion" icon="exit" route="/log_in" />

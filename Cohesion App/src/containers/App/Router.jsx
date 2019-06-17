@@ -37,6 +37,7 @@ import TextEditor from '../DefaultPage/TextEditor/index';
 import InvoiceTemplate from '../DefaultPage/InvoiceTemplate/index';
 import SearchResults from '../DefaultPage/SearchResults/index';
 import ProjectSummary from '../DefaultPage/ProjectSummary/index';
+import MesProjets from '../DefaultPage/MesProjets/index';
 
 import Catalog from '../ECommerce/Catalog/index';
 import ProductPage from '../ECommerce/ProductPage/index';
@@ -182,6 +183,7 @@ const DefaultPages = () => (
     <Route path="/default_pages/invoice_template" component={InvoiceTemplate} />
     <Route path="/default_pages/pricing_cards" component={PricingCards} />
     <Route path="/default_pages/project_summary" component={ProjectSummary} />
+    <Route path="/default_pages/mes_projets" component={MesProjets} />
     <Route path="/default_pages/search_results" component={SearchResults} />
     <Route path="/default_pages/text_editor" component={TextEditor} />
   </Switch>

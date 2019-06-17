@@ -4,33 +4,16 @@ import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import NotificationSystem from 'rc-notification';
 import Topbar from './topbar/Topbar';
 import TopbarWithNavigation from './topbar_with_navigation/TopbarWithNavigation';
 import Sidebar from './sidebar/Sidebar';
 import SidebarMobile from './topbar_with_navigation/sidebar_mobile/SidebarMobile';
 import Customizer from './customizer/Customizer';
-import { BasicNotification } from '../../shared/components/Notification';
 import { changeMobileSidebarVisibility, changeSidebarVisibility } from '../../redux/actions/sidebarActions';
 import { changeThemeToDark, changeThemeToLight } from '../../redux/actions/themeActions';
 import { changeBorderRadius, toggleBoxShadow, toggleTopNavigation } from '../../redux/actions/customizerActions';
 import { CustomizerProps, SidebarProps, ThemeProps } from '../../shared/prop-types/ReducerProps';
 
-let notification = null;
-
-const showNotification = () => {
-  notification.notice({
-    content: <BasicNotification
-      title="👋 Welcome to the EasyDev!"
-      message="You have successfully registered in the EasyDev. Now you can start to explore the dashboard
-                interface with a bunch of components and applications. Enjoy!"
-    />,
-    duration: 5,
-    closable: true,
-    style: { top: 0, left: 'calc(100vw - 100%)' },
-    className: 'right-up',
-  });
-};
 
 class Layout extends Component {
   static propTypes = {
@@ -39,15 +22,6 @@ class Layout extends Component {
     customizer: CustomizerProps.isRequired,
     theme: ThemeProps.isRequired,
   };
-
-  componentDidMount() {
-    NotificationSystem.newInstance({}, n => notification = n);
-    setTimeout(() => showNotification(), 700);
-  }
-
-  componentWillUnmount() {
-    notification.destroy();
-  }
 
   changeSidebarVisibility = () => {
     const { dispatch } = this.props;
