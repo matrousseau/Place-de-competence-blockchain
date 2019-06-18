@@ -75,7 +75,6 @@ import Recharts from '../Charts/Recharts/index';
 import FitnessDashboard from '../Dashboards/Fitness/index';
 import DefaultDashboard from '../Dashboards/Default/index';
 import ECommerceDashboard from '../Dashboards/ECommerce/index';
-import CryptoDashboard from '../Dashboards/Crypto/index';
 import MobileAppDashboard from '../Dashboards/MobileApp/index';
 import BookingDashboard from '../Dashboards/Booking/index';
 
@@ -91,8 +90,6 @@ import NavigationItem from '../Documentation/07_new_navigation_item/index';
 import Resources from '../Documentation/08_resources/index';
 import Changelog from '../Documentation/09_changelog/index';
 
-
-import CryptoDashboardEdit from '../Dashboards/CryptoTableEdit/index';
 import ECommerceDashboardEdit from '../Dashboards/ECommerceTableEdit/index';
 
 import Landing from '../Landing/index';
@@ -203,12 +200,6 @@ const Documentation = () => (
   </Switch>
 );
 
-const Crypto = () => (
-  <Switch>
-    <Route exact path="/dashboard_crypto" component={CryptoDashboard} />
-    <Route path="/dashboard_crypto/edit/:index" component={CryptoDashboardEdit} />
-  </Switch>
-);
 
 const Commerce = () => (
   <Switch>
@@ -224,7 +215,6 @@ const wrappedRoutes = () => (
       <Route path="/dashboard_default" component={DefaultDashboard} />
       <Route path="/dashboard_e_commerce" component={Commerce} />
       <Route path="/dashboard_fitness" component={FitnessDashboard} />
-      <Route path="/dashboard_crypto" component={Crypto} />
       <Route exact path="/dashboard_mobile_app" component={MobileAppDashboard} />
       <Route path="/dashboard_booking" component={BookingDashboard} />
       <Route path="/ui" component={UI} />
