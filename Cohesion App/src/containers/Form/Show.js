@@ -9,6 +9,7 @@ export default (async function showResults(values) {
     body: JSON.stringify(values, null, 2),
   });
   console.log(JSON.stringify(values, null, 2));
+  window.alert('Nouveau projet créé');
 }
 
 );
