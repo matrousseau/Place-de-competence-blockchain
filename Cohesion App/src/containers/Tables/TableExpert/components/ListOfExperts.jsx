@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 import React, { PureComponent } from 'react';
 import { connect } from 'react-redux';
 import {
@@ -6,8 +7,7 @@ import {
 import ResponsiveTable from './ResponsiveTable';
 import TitleTable from './TitleTable';
 
-const API = 'https://hn.algolia.com/api/v1/search?query=';
-const DEFAULT_QUERY = 'redux';
+const API = 'http://localhost:8919/api/cohesion.participant.cohesionAgent';
 
 class ListOfExperts extends PureComponent {
   constructor() {
@@ -18,15 +18,15 @@ class ListOfExperts extends PureComponent {
   }
 
   componentDidMount() {
-    fetch(API + DEFAULT_QUERY)
+    fetch(API)
       .then(response => response.json())
-      .then(data => this.setState({ hits: data.hits }));
+      .then(data => this.setState({ hits: data }));
   }
 
   renderTitle() {
     const { hits } = this.state;
     return hits.map(
-      hit => <div key={hit.objectID}> <ResponsiveTable Prénom={hit.author} /></div>,
+      hit => <div key={hit.email}> <ResponsiveTable Prénom={hit.prenom} Nom={hit.nom} Entité={hit.entite} /></div>,
     );
   }
 

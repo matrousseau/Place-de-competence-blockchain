@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 import React, { PureComponent } from 'react';
 import { connect } from 'react-redux';
 import {
@@ -36,7 +37,7 @@ class JustifyTabsBorderedTop extends PureComponent {
   renderTitle() {
     const { hits } = this.state;
     return hits.map(
-      hit => <div key={hit.title}> <Summary title={hit.title} /></div>,
+      hit => <div key={hit.titre}> <Summary title={hit.titre} email={hit.email} nom={hit.username} description={hit.textarea} nombre={hit.nombre} /></div>,
     );
   }
 

@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
 import Divider from '@material-ui/core/Divider';
 import PropTypes from 'prop-types';
@@ -6,7 +7,9 @@ import {
 } from 'reactstrap';
 import Statistics from './Statistics';
 
-const Summary = ({ title, description }) => (
+const Summary = ({
+  title, nom, email, description, nombre,
+}) => (
   <Col md={12} lg={12} xl={12}>
     <Card>
       <CardBody>
@@ -20,19 +23,19 @@ const Summary = ({ title, description }) => (
           <table className="project-summary__info">
             <tbody>
               <tr>
-                <th>Entité aidée:</th>
+                <th>Titre de la mission:</th>
                 <td>{ title }</td>
               </tr>
               <tr>
-                <th>Date de rendu:</th>
-                <td>21/07/2019</td>
+                <th>Nom du demandeur:</th>
+                <td>{ nom }</td>
               </tr>
               <tr>
-                <th>Brief de entité:</th>
-                <td><a href="/">Brief.xls</a></td>
+                <th>E-mail du demandeur:</th>
+                <td>{ email }</td>
               </tr>
               <tr>
-                <th>Statut</th>
+                <th>Statut:</th>
                 <td>En attente d&apos;un expert</td>
               </tr>
               <br />
@@ -48,7 +51,7 @@ const Summary = ({ title, description }) => (
               <p>6 <span>Tâches</span></p>
             </div>
             <div className="project-summary__stat">
-              <p>4 <span>Participants</span></p>
+              <p>{ nombre } <span>Participant(s)</span></p>
             </div>
             <div className="project-summary__progress progress-wrap progress-wrap--middle">
               <Progress value={74}>74% de la mission terminée</Progress>
