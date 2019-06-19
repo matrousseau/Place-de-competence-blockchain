@@ -1,23 +1,28 @@
 import React, { PureComponent } from 'react';
+import { connect } from 'react-redux';
 import {
   Card, CardBody, Col, Nav, NavItem, NavLink, TabContent, TabPane,
 } from 'reactstrap';
 import classnames from 'classnames';
-import { withTranslation } from 'react-i18next';
-import PropTypes from 'prop-types';
 import Divider from '@material-ui/core/Divider';
 import Summary from './Summary';
 
-class JustifyTabsBorderedTop extends PureComponent {
-  static propTypes = {
-    t: PropTypes.func.isRequired,
-  };
+const API = 'https://hn.algolia.com/api/v1/search?query=';
+const DEFAULT_QUERY = 'redux';
 
+class JustifyTabsBorderedTop extends PureComponent {
   constructor() {
     super();
     this.state = {
       activeTab: '1',
+      hits: [],
     };
+  }
+
+  componentDidMount() {
+    fetch(API + DEFAULT_QUERY)
+      .then(response => response.json())
+      .then(data => this.setState({ hits: data.hits }));
   }
 
   toggle = (tab) => {
@@ -29,8 +34,14 @@ class JustifyTabsBorderedTop extends PureComponent {
     }
   };
 
+  renderTitle() {
+    const { hits } = this.state;
+    return hits.map(
+      hit => <div key={hit.objectID}> <Summary title={hit.author} /></div>,
+    );
+  }
+
   render() {
-    const { t } = this.props;
     const { activeTab } = this.state;
 
     return (
@@ -38,7 +49,7 @@ class JustifyTabsBorderedTop extends PureComponent {
         <Card>
           <CardBody>
             <div className="card__title">
-              <h5 className="bold-text">{t('Vos missions')}</h5>
+              <h5 className="bold-text">Vos missions</h5>
             </div>
             <div className="tabs tabs--justify tabs--bordered-top">
               <div className="tabs__wrap">
@@ -66,12 +77,11 @@ class JustifyTabsBorderedTop extends PureComponent {
                 </Nav>
                 <TabContent activeTab={activeTab}>
                   <TabPane tabId="1">
-                    <Summary />
                     <Divider />
+                    <ul>
+                      {this.renderTitle()}
+                    </ul>
                     <Summary />
-                    <Divider />
-                    <Summary />
-
                   </TabPane>
                   <TabPane tabId="2">
                     <p>Direction has strangers now believing. Respect enjoyed gay far exposed parlors towards. Enjoyment
@@ -99,4 +109,8 @@ class JustifyTabsBorderedTop extends PureComponent {
   }
 }
 
-export default withTranslation('common')(JustifyTabsBorderedTop);
+function mapStateToProps(state) {
+  return { hits: state.hits };
+}
+
+export default connect(mapStateToProps)(JustifyTabsBorderedTop);

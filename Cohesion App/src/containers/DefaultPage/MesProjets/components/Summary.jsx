@@ -1,10 +1,11 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import {
   Card, CardBody, Col, Progress, Button,
 } from 'reactstrap';
 import Statistics from './Statistics';
 
-const Summary = () => (
+const Summary = ({ title }) => (
   <Col md={12} lg={12} xl={12}>
     <Card>
       <CardBody>
@@ -17,7 +18,7 @@ const Summary = () => (
             <tbody>
               <tr>
                 <th>Entité aidée:</th>
-                <td>Nom entité</td>
+                <td>{ title }</td>
               </tr>
               <tr>
                 <th>Date de rendu:</th>
@@ -51,5 +52,13 @@ const Summary = () => (
     </Card>
   </Col>
 );
+
+Summary.propTypes = {
+  title: PropTypes.string,
+};
+
+Summary.defaultProps = {
+  title: 'null',
+};
 
 export default Summary;
