@@ -5,13 +5,13 @@ import {
 } from 'reactstrap';
 import Statistics from './Statistics';
 
-const Summary = ({ title }) => (
+const Summary = ({ title, description }) => (
   <Col md={12} lg={12} xl={12}>
     <Card>
       <CardBody>
         <div className="project-summary">
           <div className="card__title">
-            <h5 className="bold-text">Maison des Safer - GIE SIIIS </h5>
+            <h5 className="bold-text">{ title }</h5>
           </div>
           <Button className="project-summary__btn" outline size="sm"><a href="/todo">Plus de détails...</a></Button>
           <table className="project-summary__info">
@@ -30,9 +30,7 @@ const Summary = ({ title }) => (
               </tr>
             </tbody>
           </table>
-          <p>Architecte Big Data
-          Etude solution synchronisation SYBASE / POSTGRESQL (Apache Nifi, Talend, Pentaho Data Integration)
-          Mise en place d un POC / démonstrateur
+          <p>{ description }
           </p>
           <div className="project-summary__stats">
             <div className="project-summary__stat">
@@ -55,10 +53,12 @@ const Summary = ({ title }) => (
 
 Summary.propTypes = {
   title: PropTypes.string,
+  description: PropTypes.string,
 };
 
 Summary.defaultProps = {
   title: 'null',
+  description: 'null',
 };
 
 export default Summary;

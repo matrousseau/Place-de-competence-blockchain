@@ -30,7 +30,7 @@ const WizardFormOne = ({ handleSubmit, previousPage }) => (
     </div>
     <ButtonToolbar className="form__button-toolbar wizard__toolbar">
       <Button color="primary" type="button" className="previous" onClick={previousPage}>Retour</Button>
-      <Button color="primary" type="submit">Proposer le projet</Button>
+      <Button type="submit" onClick={handleSubmit} href="/easydev/default_pages/mes_projets">Valider</Button>
     </ButtonToolbar>
   </form>
 );
@@ -41,7 +41,7 @@ WizardFormOne.propTypes = {
 };
 
 export default reduxForm({
-  form: 'wizard', //                 <------ same form name
+  form: 'wizard', //                 <------ same form namez
   destroyOnUnmount: false, //        <------ preserve form data
   forceUnregisterOnUnmount: true, // <------ unregister fields on unmount
 })(WizardFormOne);

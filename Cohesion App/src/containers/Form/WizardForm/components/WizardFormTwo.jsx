@@ -2,7 +2,6 @@ import React from 'react';
 import { Button, ButtonToolbar } from 'reactstrap';
 import { Field, reduxForm } from 'redux-form';
 import PropTypes from 'prop-types';
-import renderMultiSelectField from '../../../../shared/components/form/MultiSelect';
 
 const WizardFormTwo = ({ handleSubmit, previousPage }) => (
   <form className="form form--horizontal wizard__form" onSubmit={handleSubmit}>
@@ -19,19 +18,13 @@ const WizardFormTwo = ({ handleSubmit, previousPage }) => (
       </div>
     </div>
     <div className="form__form-group">
-      <span className="form__form-group-label">Compétences</span>
+      <span className="form__form-group-label">Compétence</span>
       <div className="form__form-group-field">
         <Field
-          name="multiSelect"
-          component={renderMultiSelectField}
-          options={[
-            { value: '1', label: 'Python' },
-            { value: '2', label: 'OVH' },
-            { value: '3', label: 'Architecture de SI' },
-            { value: '4', label: 'Management' },
-            { value: '5', label: 'Marketing' },
-            { value: '6', label: 'Graphisme' },
-          ]}
+          name="competence"
+          component="input"
+          type="text"
+          placeholder="Compétences"
         />
       </div>
     </div>
