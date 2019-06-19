@@ -1,34 +1,25 @@
 import React from 'react';
+import {
+  Button, ButtonToolbar,
+} from 'reactstrap';
 import TimeLineItem from '../../../../shared/components/TimeLineItem';
-
-const Ava1 = `${process.env.PUBLIC_URL}/img/14.png`;
-const Ava2 = `${process.env.PUBLIC_URL}/img/15.png`;
 
 const TimelineHistory = () => (
   <div className="timeline">
-    <TimeLineItem type="work" title="Tensorflow" date="124 pts">
-      <p>Expert</p>
+    <TimeLineItem type="work" title="Machine Learning" date="120 pts">
+      <p>Maître</p>
     </TimeLineItem>
-    <TimeLineItem type="video" title="Video conference with client" date="5 hours ago">
-      <p>Dependent certainty off discovery him his tolerably offending. Ham for attention remainder
-            sometimes additions recommend fat our.
+    <TimeLineItem type="work" title="Marketing" date="30 pts">
+      <p>Compétent
       </p>
     </TimeLineItem>
-    <TimeLineItem img={Ava1} title="Call to Jovanna" date="8 hours ago">
-      <p>Dependent certainty off discovery him his tolerably offending. Ham for attention remainder
-            sometimes additions recommend fat our.
+    <TimeLineItem type="work" title="Communication" date="70 pts">
+      <p>Expert
       </p>
     </TimeLineItem>
-    <TimeLineItem type="file" title="Create offer. Prepare document" date="Yesterday at 18:30">
-      <p>Dependent certainty off discovery him his tolerably offending. Ham for attention remainder
-            sometimes additions recommend fat our.
-      </p>
-    </TimeLineItem>
-    <TimeLineItem img={Ava2} title="Conversation with Philip" date="21.03.2017">
-      <p>Dependent certainty off discovery him his tolerably offending. Ham for attention remainder
-            sometimes additions recommend fat our.
-      </p>
-    </TimeLineItem>
+    <ButtonToolbar className="form__button-toolbar">
+      <Button color="primary" className="rounded" outline><a href="/forms/basic_form">Créer une compétence</a></Button>
+    </ButtonToolbar>
   </div>
 );
 
