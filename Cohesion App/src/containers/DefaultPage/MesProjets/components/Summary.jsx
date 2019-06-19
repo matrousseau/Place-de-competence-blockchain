@@ -17,9 +17,6 @@ const Summary = ({ title, description }) => (
           <div>
             <Button className="project-summary__btn" outline size="sm"><a href="/todo">Plus de détails...</a></Button>
           </div>
-          <div>
-            <Button outline size="sm"><a href="/todo">Trouver un expert</a></Button>
-          </div>
           <table className="project-summary__info">
             <tbody>
               <tr>
@@ -37,6 +34,10 @@ const Summary = ({ title, description }) => (
               <tr>
                 <th>Statut</th>
                 <td>En attente d&apos;un expert</td>
+              </tr>
+              <br />
+              <tr>
+                <td><Button outline size="sm"><a href="/tables/table_expert">Trouver un expert</a></Button></td>
               </tr>
             </tbody>
           </table>
