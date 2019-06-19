@@ -1,7 +1,7 @@
 /* eslint-disable no-alert */
 
 export default (async function showResults(values) {
-  fetch('http://localhost:5000/dummy', {
+  fetch('http://localhost:8919/api/cohesion.mission.CreateMission', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',

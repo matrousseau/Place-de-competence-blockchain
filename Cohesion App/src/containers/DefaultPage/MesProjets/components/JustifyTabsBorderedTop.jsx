@@ -7,8 +7,7 @@ import classnames from 'classnames';
 import Divider from '@material-ui/core/Divider';
 import Summary from './Summary';
 
-const API = 'https://hn.algolia.com/api/v1/search?query=';
-const DEFAULT_QUERY = 'redux';
+const API = 'http://localhost:8919/api/cohesion.mission.Mission';
 
 class JustifyTabsBorderedTop extends PureComponent {
   constructor() {
@@ -20,9 +19,9 @@ class JustifyTabsBorderedTop extends PureComponent {
   }
 
   componentDidMount() {
-    fetch(API + DEFAULT_QUERY)
+    fetch(API)
       .then(response => response.json())
-      .then(data => this.setState({ hits: data.hits }));
+      .then(data => this.setState({ hits: data }));
   }
 
   toggle = (tab) => {
@@ -37,7 +36,7 @@ class JustifyTabsBorderedTop extends PureComponent {
   renderTitle() {
     const { hits } = this.state;
     return hits.map(
-      hit => <div key={hit.objectID}> <Summary title={hit.author} /></div>,
+      hit => <div key={hit.title}> <Summary title={hit.title} /></div>,
     );
   }
 
@@ -81,7 +80,6 @@ class JustifyTabsBorderedTop extends PureComponent {
                     <ul>
                       {this.renderTitle()}
                     </ul>
-                    <Summary />
                   </TabPane>
                   <TabPane tabId="2">
                     <p>Direction has strangers now believing. Respect enjoyed gay far exposed parlors towards. Enjoyment
