@@ -4,6 +4,7 @@ import {
   Card, CardBody, Col,
 } from 'reactstrap';
 import ResponsiveTable from './ResponsiveTable';
+import TitleTable from './TitleTable';
 
 const API = 'https://hn.algolia.com/api/v1/search?query=';
 const DEFAULT_QUERY = 'redux';
@@ -25,7 +26,7 @@ class ListOfExperts extends PureComponent {
   renderTitle() {
     const { hits } = this.state;
     return hits.map(
-      hit => <div key={hit.objectID}> <ResponsiveTable Nom={hits.author} /></div>,
+      hit => <div key={hit.objectID}> <ResponsiveTable Prénom={hit.author} /></div>,
     );
   }
 
@@ -37,6 +38,7 @@ class ListOfExperts extends PureComponent {
             <div className="card__title">
               <h5 className="bold-text">Vos missions</h5>
             </div>
+            <TitleTable />
             {this.renderTitle()}
           </CardBody>
         </Card>

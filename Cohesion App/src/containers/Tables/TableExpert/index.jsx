@@ -8,7 +8,7 @@ const TableExpert = ({ t }) => (
   <Container>
     <Row>
       <Col md={12}>
-        <h3 className="page-title">{t('tables.basic_tables.title')}</h3>
+        <h3 className="page-title">{t('Experts disponibles')}</h3>
       </Col>
     </Row>
     <Row>

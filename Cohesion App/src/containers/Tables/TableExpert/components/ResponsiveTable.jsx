@@ -6,30 +6,25 @@ import { withTranslation } from 'react-i18next';
 import PropTypes from 'prop-types';
 
 const ResponsiveTable = ({
-  expertProps,
+  Nom,
+  Prénom,
+  Entité,
+  Email,
+  Compétences,
+  Status,
 }) => (
   <Col md={12} lg={12}>
     <Card>
       <CardBody>
         <Table responsive className="table--bordered">
-          <thead>
-            <tr>
-              <th>Nom</th>
-              <th>Prénom</th>
-              <th>Entité</th>
-              <th>Email</th>
-              <th>Compétences</th>
-              <th>Status</th>
-            </tr>
-          </thead>
           <tbody>
             <tr>
-              <th> Nom </th>
-              <td> Prénom </td>
-              <td> Entité </td>
-              <td> Email </td>
-              <td>{ expertProps }</td>
-              <td><Badge color="success">Status </Badge></td>
+              <th>{ Nom }</th>
+              <td>{ Prénom }</td>
+              <td>{ Entité }</td>
+              <td>{ Email }</td>
+              <td>{ Compétences }</td>
+              <td><Badge color="success">{ Status }</Badge></td>
             </tr>
           </tbody>
         </Table>
@@ -39,7 +34,12 @@ const ResponsiveTable = ({
 );
 
 ResponsiveTable.propTypes = {
-  expertProps: PropTypes.func.isRequired,
+  Nom: PropTypes.func.isRequired,
+  Prénom: PropTypes.func.isRequired,
+  Entité: PropTypes.func.isRequired,
+  Email: PropTypes.func.isRequired,
+  Compétences: PropTypes.func.isRequired,
+  Status: PropTypes.func.isRequired,
 };
 
 export default withTranslation('common')(ResponsiveTable);

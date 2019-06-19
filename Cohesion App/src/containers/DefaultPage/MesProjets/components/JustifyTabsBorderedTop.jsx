@@ -37,7 +37,7 @@ class JustifyTabsBorderedTop extends PureComponent {
   renderTitle() {
     const { hits } = this.state;
     return hits.map(
-      hit => <div key={hit.objectID}> <Summary userProps={hit.objectID} /></div>,
+      hit => <div key={hit.objectID}> <Summary title={hit.author} /></div>,
     );
   }
 
