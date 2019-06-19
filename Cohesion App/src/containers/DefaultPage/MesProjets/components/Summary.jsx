@@ -1,4 +1,5 @@
 import React from 'react';
+import Divider from '@material-ui/core/Divider';
 import PropTypes from 'prop-types';
 import {
   Card, CardBody, Col, Progress, Button,
@@ -13,7 +14,9 @@ const Summary = ({ title, description }) => (
           <div className="card__title">
             <h5 className="bold-text">{ title }</h5>
           </div>
-          <Button className="project-summary__btn" outline size="sm"><a href="/todo">Plus de détails...</a></Button>
+          <div>
+            <Button className="project-summary__btn" outline size="sm"><a href="/todo">Plus de détails...</a></Button>
+          </div>
           <table className="project-summary__info">
             <tbody>
               <tr>
@@ -27,6 +30,14 @@ const Summary = ({ title, description }) => (
               <tr>
                 <th>Brief de entité:</th>
                 <td><a href="/">Brief.xls</a></td>
+              </tr>
+              <tr>
+                <th>Statut</th>
+                <td>En attente d&apos;un expert</td>
+              </tr>
+              <br />
+              <tr>
+                <td><Button outline size="sm"><a href="/tables/table_expert">Trouver un expert</a></Button></td>
               </tr>
             </tbody>
           </table>
@@ -47,6 +58,7 @@ const Summary = ({ title, description }) => (
           <Statistics />
         </div>
       </CardBody>
+      <Divider />
     </Card>
   </Col>
 );

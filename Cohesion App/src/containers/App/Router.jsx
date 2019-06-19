@@ -19,6 +19,7 @@ import Tooltips from '../UI/Tooltips/index';
 import Typography from '../UI/Typography/index';
 
 import BasicTables from '../Tables/BasicTables/index';
+import TableExpert from '../Tables/TableExpert/index';
 import DataTable from '../Tables/DataTable/index';
 import EditableTable from '../Tables/EditableTable/index';
 import MaterialTable from '../Tables/MaterialTable/index';
@@ -132,6 +133,7 @@ const Forms = () => (
 const Tables = () => (
   <Switch>
     <Route path="/tables/basic_tables" component={BasicTables} />
+    <Route path="/tables/table_expert" component={TableExpert} />
     <Route path="/tables/data_table" component={DataTable} />
     <Route path="/tables/editable_table" component={EditableTable} />
     <Route path="/tables/material_table" component={MaterialTable} />

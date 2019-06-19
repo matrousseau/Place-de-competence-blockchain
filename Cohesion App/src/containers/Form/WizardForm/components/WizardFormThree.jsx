@@ -30,7 +30,7 @@ const WizardFormOne = ({ handleSubmit, previousPage }) => (
     </div>
     <ButtonToolbar className="form__button-toolbar wizard__toolbar">
       <Button color="primary" type="button" className="previous" onClick={previousPage}>Retour</Button>
-      <Button type="submit" onClick={handleSubmit} href="/easydev/default_pages/mes_projets">Valider</Button>
+      <Button color="primary" type="submit" onClick={handleSubmit}> Valider</Button>
     </ButtonToolbar>
   </form>
 );
