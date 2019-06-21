@@ -1,26 +1,21 @@
+/* eslint-disable import/order */
+/* eslint-disable max-len */
+/* eslint-disable import/extensions */
+/* eslint-disable no-useless-escape */
+/* eslint-disable import/no-unresolved */
 import React from 'react';
+import JustifyTabsBorderedTop from '../../../DefaultPage/MesProjets/components/JustifyTabsBorderedTop.1';
 import {
-  Button, ButtonToolbar,
+  Container, Button, ButtonToolbar,
 } from 'reactstrap';
-import TimeLineItem from '../../../../shared/components/TimeLineItem';
 
-const TimelineHistory = () => (
-  <div className="timeline">
-    <TimeLineItem type="work" title="Machine Learning" date="120 pts">
-      <p>Maître</p>
-    </TimeLineItem>
-    <TimeLineItem type="work" title="Marketing" date="30 pts">
-      <p>Compétent
-      </p>
-    </TimeLineItem>
-    <TimeLineItem type="work" title="Communication" date="70 pts">
-      <p>Expert
-      </p>
-    </TimeLineItem>
+const ProjectSummary = () => (
+  <Container>
     <ButtonToolbar className="form__button-toolbar">
-      <Button color="primary" className="rounded" outline><a href="/forms/basic_form">Créer une compétence</a></Button>
+      <Button color="primary" className="rounded" outline><a href="/forms/basic_form">Ajouter une compétence</a></Button>
     </ButtonToolbar>
-  </div>
+    <JustifyTabsBorderedTop />
+  </Container>
 );
 
-export default TimelineHistory;
+export default ProjectSummary;

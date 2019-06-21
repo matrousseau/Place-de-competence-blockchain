@@ -24,16 +24,16 @@ const ProfileMain = () => (
         </div>
         <div className="profile__stats">
           <div className="profile__stat">
-            <p className="profile__stat-number">03</p>
-            <p className="profile__stat-title">Certifications</p>
+            <p className="profile__stat-number">340</p>
+            <p className="profile__stat-title">COINS</p>
           </div>
           <div className="profile__stat">
             <p className="profile__stat-number">2</p>
-            <p className="profile__stat-title">Missions en cours</p>
+            <p className="profile__stat-title">MISSIONS EN COURS</p>
           </div>
           <div className="profile__stat">
             <p className="profile__stat-number">5</p>
-            <p className="profile__stat-title">Missions terminées</p>
+            <p className="profile__stat-title">MISSION TERMINEES</p>
           </div>
         </div>
       </CardBody>

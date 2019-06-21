@@ -41,7 +41,7 @@ class HorizontalForm extends PureComponent {
                 <span className="form__form-group-label">Nom de la compétence</span>
                 <div className="form__form-group-field">
                   <Field
-                    name="defaultInput"
+                    name="nom"
                     component="input"
                     type="text"
                     placeholder="Default Input"
@@ -49,29 +49,18 @@ class HorizontalForm extends PureComponent {
                 </div>
               </div>
               <div className="form__form-group">
-                <span className="form__form-group-label">Nom de la compétence</span>
-                <div className="form__form-group-field">
-                  <Field
-                    name="defaultInput"
-                    component="input"
-                    type="text"
-                    placeholder="Default Input"
-                  />
-                </div>
-              </div>
-              <div className="form__form-group">
-                <span className="form__form-group-label">Votre e-mail</span>
+                <span className="form__form-group-label">Pièce justificative</span>
                 <div className="form__form-group-field">
                   <Field
                     name="email"
                     component="input"
-                    type="email"
-                    placeholder="example@mail.com"
+                    type="file"
+                    value="clemence.degene@intradef.gouv.fr"
                   />
                 </div>
               </div>
               <ButtonToolbar className="form__button-toolbar">
-                <Button color="primary" type="submit">Submit</Button>
+                <Button color="primary" type="submit">Ajouter la compétence</Button>
                 <Button type="button" onClick={reset}>
                   Cancel
                 </Button>

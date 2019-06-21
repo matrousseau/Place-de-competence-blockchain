@@ -5,9 +5,11 @@ import {
   Card, CardBody, Col, TabContent, TabPane,
 } from 'reactstrap';
 import Divider from '@material-ui/core/Divider';
-import Summary from './Summary';
+import Summary from './Summary.1';
+import Summary2 from './Summary.2';
+import Summary3 from './Summary.3';
 
-const API = 'http://localhost:8919/api/cohesion.mission.Mission';
+const API = 'http://localhost:8919/api/cohesion.competence.Competence';
 
 class JustifyTabsBorderedTop extends PureComponent {
   constructor() {
@@ -36,7 +38,7 @@ class JustifyTabsBorderedTop extends PureComponent {
   renderTitle() {
     const { hits } = this.state;
     return hits.map(
-      hit => <div key={hit.titre}> <Summary title={hit.titre} email={hit.email} nom={hit.username} description={hit.textarea} nombre={hit.nombre} competence={hit.competences} /></div>,
+      hit => <div key={hit.nom}> <Summary nom={hit.nom} email={hit.email} note={hit.note} /></div>,
     );
   }
 
@@ -48,7 +50,7 @@ class JustifyTabsBorderedTop extends PureComponent {
         <Card>
           <CardBody>
             <div className="card__title">
-              <h5 className="bold-text">Les missions qui pourraient vous intérésser</h5>
+              <h5 className="bold-text">Vos Compétences</h5>
             </div>
             <div className="tabs tabs--justify tabs--bordered-top">
               <div className="tabs__wrap">
@@ -57,6 +59,12 @@ class JustifyTabsBorderedTop extends PureComponent {
                     <Divider />
                     <ul>
                       {this.renderTitle()}
+                    </ul>
+                    <ul>
+                      <Summary2 />
+                    </ul>
+                    <ul>
+                      <Summary3 />
                     </ul>
                   </TabPane>
                   <TabPane tabId="2">

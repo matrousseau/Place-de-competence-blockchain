@@ -3,7 +3,7 @@ import { Col, Container, Row } from 'reactstrap';
 import { withTranslation } from 'react-i18next';
 import PropTypes from 'prop-types';
 import HorizontalForm from './components/HorizontalForm';
-import showResults from '../Show';
+import showResults from '../Show2';
 
 const BasicForm = ({ t }) => (
   <Container>

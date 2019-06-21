@@ -1,6 +1,6 @@
 import React from 'react';
 import { Col, Container, Row } from 'reactstrap';
-import Summary from './components/Summary';
+import JustifyTabsBorderedTop from './components/JustifyTabsBorderedTop';
 
 const ProjectSummary = () => (
   <Container>
@@ -11,11 +11,7 @@ const ProjectSummary = () => (
         </h3>
       </Col>
     </Row>
-    <Row>
-      <Summary />
-      <Summary />
-      <Summary />
-    </Row>
+    <JustifyTabsBorderedTop />
   </Container>
 );
 

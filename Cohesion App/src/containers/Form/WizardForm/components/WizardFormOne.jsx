@@ -44,7 +44,7 @@ class WizardFormOne extends PureComponent {
               name="email"
               component="input"
               type="email"
-              placeholder="exemple@mail.com"
+              placeholder="clemence.degene@intradef.gouv.fr"
             />
           </div>
         </div>

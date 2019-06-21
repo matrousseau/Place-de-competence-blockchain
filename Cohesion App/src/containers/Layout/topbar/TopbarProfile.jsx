@@ -3,7 +3,7 @@ import DownIcon from 'mdi-react/ChevronDownIcon';
 import { Collapse } from 'reactstrap';
 import TopbarMenuLink from './TopbarMenuLink';
 
-const Ava = `${process.env.PUBLIC_URL}/img/ava.png`;
+const Ava = `${process.env.PUBLIC_URL}/img/12.jpg`;
 
 export default class TopbarProfile extends PureComponent {
   constructor() {
@@ -30,14 +30,12 @@ export default class TopbarProfile extends PureComponent {
         {collapse && <button className="topbar__back" type="button" onClick={this.toggle} />}
         <Collapse isOpen={collapse} className="topbar__menu-wrap">
           <div className="topbar__menu">
-            <TopbarMenuLink title="My Profile" icon="user" path="/account/profile" />
-            <TopbarMenuLink title="Calendar" icon="calendar-full" path="/default_pages/calendar" />
-            <TopbarMenuLink title="Tasks" icon="list" path="/default_pages/calendar" />
-            <TopbarMenuLink title="Inbox" icon="inbox" path="/mail" />
+            <TopbarMenuLink title="Mon profil" icon="user" path="/account/profile" />
+            <TopbarMenuLink title="Calendrier" icon="calendar-full" path="/default_pages/calendar" />
+            <TopbarMenuLink title="Boîte de réception" icon="inbox" path="/mail" />
             <div className="topbar__menu-divider" />
-            <TopbarMenuLink title="Account Settings" icon="cog" path="/account/profile" />
-            <TopbarMenuLink title="Lock Screen" icon="lock" path="/lock_screen" />
-            <TopbarMenuLink title="Log Out" icon="exit" path="/log_in" />
+            <TopbarMenuLink title="Paramètres" icon="cog" path="/account/profile" />
+            <TopbarMenuLink title="Déconnexion" icon="exit" path="/log_in" />
           </div>
         </Collapse>
       </div>

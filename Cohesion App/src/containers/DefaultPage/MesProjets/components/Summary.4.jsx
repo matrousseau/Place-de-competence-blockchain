@@ -1,46 +1,43 @@
+/* eslint-disable react/no-unescaped-entities */
 /* eslint-disable max-len */
 /* eslint-disable react/prop-types */
 import React from 'react';
 import Divider from '@material-ui/core/Divider';
-import PropTypes from 'prop-types';
 import {
-  Card, CardBody, Col, Button,
+  Card, CardBody, Col,
 } from 'reactstrap';
+import HorizontalForm2 from '../../../Form/BasicForm/components/HorizontalForm.1';
+import showResults from '../Show2';
 
-const Summary = ({
-  title, nom, email, description, nombre,
-}) => (
+const Summary = () => (
   <Col md={12} lg={12} xl={12}>
     <Card>
       <CardBody>
         <div className="project-summary">
           <div className="card__title">
-            <h5 className="bold-text">{ title }</h5>
-          </div>
-          <div>
-            <Button className="project-summary__btn" outline size="sm"><a href="/todo">Plus de détails...</a></Button>
+            <h5 className="bold-text">Voiture autonome</h5>
           </div>
           <table className="project-summary__info">
             <tbody>
               <tr>
                 <th>Description:</th>
-                <td>{ description }</td>
+                <td>Développement d'un algorithme de Machine Learning permettant à une voiture à l'échelle 1/18 d'être autonome sur un circuit</td>
               </tr>
               <tr>
                 <th>Titre de la mission:</th>
-                <td>{ title }</td>
+                <td>Voiture autonome</td>
               </tr>
               <tr>
                 <th>Nom du demandeur:</th>
-                <td>{ nom }</td>
+                <td>Duit</td>
               </tr>
               <tr>
                 <th>E-mail du demandeur:</th>
-                <td>{ email }</td>
+                <td>damien.duit@intradef.gouv.fr</td>
               </tr>
               <tr>
                 <th>Statut:</th>
-                <td>En attente d&apos;un expert</td>
+                <td>Terminée</td>
               </tr>
               <br />
             </tbody>
@@ -50,11 +47,9 @@ const Summary = ({
               <p>6 <span>Tâches</span></p>
             </div> */}
             <div className="project-summary__stat">
-              <p>{ nombre } <span>Expert(s) demandé(s)</span></p>
+              <p>MISSION TERMINEE</p>
             </div>
-            <div className="project-summary__progress progress-wrap progress-wrap--middle">
-              <Button outline size="sm"><a href="/tables/table_expert">Trouver un expert...</a></Button>
-            </div>
+            <HorizontalForm2 onSubmit={showResults} />
           </div>
           {/* <Statistics /> */}
         </div>
@@ -63,11 +58,6 @@ const Summary = ({
     </Card>
   </Col>
 );
-
-Summary.propTypes = {
-  title: PropTypes.string,
-  description: PropTypes.string,
-};
 
 Summary.defaultProps = {
   title: 'null',

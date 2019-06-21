@@ -1,3 +1,4 @@
+/* eslint-disable react/self-closing-comp */
 /* eslint-disable max-len */
 import React, { PureComponent } from 'react';
 import { connect } from 'react-redux';
@@ -7,6 +8,7 @@ import {
 import classnames from 'classnames';
 import Divider from '@material-ui/core/Divider';
 import Summary from './Summary';
+import Summary4 from './Summary.4';
 
 const API = 'http://localhost:8919/api/cohesion.mission.Mission';
 
@@ -71,7 +73,17 @@ class JustifyTabsBorderedTop extends PureComponent {
                         this.toggle('2');
                       }}
                     >
-                      Vos contributions
+                      Vos missions en cours
+                    </NavLink>
+                  </NavItem>
+                  <NavItem>
+                    <NavLink
+                      className={classnames({ active: activeTab === '3' })}
+                      onClick={() => {
+                        this.toggle('3');
+                      }}
+                    >
+                      Vos missions terminées
                     </NavLink>
                   </NavItem>
                 </Nav>
@@ -83,20 +95,11 @@ class JustifyTabsBorderedTop extends PureComponent {
                     </ul>
                   </TabPane>
                   <TabPane tabId="2">
-                    <p>Direction has strangers now believing. Respect enjoyed gay far exposed parlors towards. Enjoyment
-                      use tolerably dependent listening men. No peculiar in handsome together unlocked do by.
-                    </p>
                   </TabPane>
                   <TabPane tabId="3">
-                    <p>Direction has strangers now believing. Respect enjoyed gay far exposed parlors towards. Enjoyment
-                      use tolerably dependent listening men. No peculiar in handsome together unlocked do by.
-                    </p>
-                  </TabPane>
-                  <TabPane tabId="4">
-                    <p>Direction has strangers now believing. Respect enjoyed gay far exposed parlors towards. Enjoyment
-                      use tolerably dependent listening men. No peculiar in handsome together unlocked do by. Article
-                      concern joy anxious did picture sir her.
-                    </p>
+                    <ul>
+                      <Summary4 />
+                    </ul>
                   </TabPane>
                 </TabContent>
               </div>
