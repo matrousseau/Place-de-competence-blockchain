@@ -33,7 +33,7 @@ class WizardFormOne extends PureComponent {
               name="username"
               component="input"
               type="text"
-              placeholder="Nom"
+              placeholder="Degêne"
             />
           </div>
         </div>

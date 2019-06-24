@@ -9,6 +9,7 @@ import classnames from 'classnames';
 import Divider from '@material-ui/core/Divider';
 import Summary from './Summary';
 import Summary4 from './Summary.4';
+import Summary5 from './Summary.5';
 
 const API = 'http://localhost:8919/api/cohesion.mission.Mission';
 
@@ -39,7 +40,7 @@ class JustifyTabsBorderedTop extends PureComponent {
   renderTitle() {
     const { hits } = this.state;
     return hits.map(
-      hit => <div key={hit.titre}> <Summary title={hit.titre} email={hit.email} nom={hit.username} description={hit.textarea} nombre={hit.nombre} /></div>,
+      hit => <div key={hit.titre}> <Summary title={hit.titre} email={hit.email} nom={hit.username} description={hit.textarea} nombre={hit.nombre} start={hit.start} end={hit.end} /></div>,
     );
   }
 
@@ -95,6 +96,9 @@ class JustifyTabsBorderedTop extends PureComponent {
                     </ul>
                   </TabPane>
                   <TabPane tabId="2">
+                    <ul>
+                      <Summary5 />
+                    </ul>
                   </TabPane>
                   <TabPane tabId="3">
                     <ul>

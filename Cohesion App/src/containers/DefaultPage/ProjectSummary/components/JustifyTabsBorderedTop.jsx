@@ -6,6 +6,7 @@ import {
 } from 'reactstrap';
 import Divider from '@material-ui/core/Divider';
 import Summary from './Summary';
+import Summary1 from './Summary.1';
 
 const API = 'http://localhost:8919/api/cohesion.mission.Mission';
 
@@ -58,11 +59,9 @@ class JustifyTabsBorderedTop extends PureComponent {
                     <ul>
                       {this.renderTitle()}
                     </ul>
-                  </TabPane>
-                  <TabPane tabId="2">
-                    <p>Direction has strangers now believing. Respect enjoyed gay far exposed parlors towards. Enjoyment
-                      use tolerably dependent listening men. No peculiar in handsome together unlocked do by.
-                    </p>
+                    <ul>
+                      <Summary1 />
+                    </ul>
                   </TabPane>
                   <TabPane tabId="3">
                     <p>Direction has strangers now believing. Respect enjoyed gay far exposed parlors towards. Enjoyment

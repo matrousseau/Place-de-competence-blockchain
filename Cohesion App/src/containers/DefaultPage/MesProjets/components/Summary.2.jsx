@@ -4,8 +4,6 @@ import {
   Card, CardBody, Col,
 } from 'reactstrap';
 
-const Ava = `${process.env.PUBLIC_URL}/img/certif.jpg`;
-
 const Summary = () => (
   <Col md={12} lg={12} xl={12}>
     <Card>
@@ -32,9 +30,6 @@ const Summary = () => (
               <p>50 <span>BADGES</span></p>
               <p>EXPERT</p>
             </div>
-          </div>
-          <div className="profile__avatar">
-            <img src={Ava} alt="avatar" />
           </div>
           <hr />
         </div>

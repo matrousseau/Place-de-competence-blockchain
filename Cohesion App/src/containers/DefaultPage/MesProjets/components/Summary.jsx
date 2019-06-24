@@ -8,7 +8,7 @@ import {
 } from 'reactstrap';
 
 const Summary = ({
-  title, nom, email, description, nombre,
+  title, nom, email, description, nombre, start, end,
 }) => (
   <Col md={12} lg={12} xl={12}>
     <Card>
@@ -37,6 +37,14 @@ const Summary = ({
               <tr>
                 <th>E-mail du demandeur:</th>
                 <td>{ email }</td>
+              </tr>
+              <tr>
+                <th>Début du projet:</th>
+                <td>{ start }</td>
+              </tr>
+              <tr>
+                <th>Fin du projet:</th>
+                <td>{ end }</td>
               </tr>
               <tr>
                 <th>Statut:</th>

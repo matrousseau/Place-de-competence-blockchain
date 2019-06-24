@@ -38,6 +38,26 @@ const WizardFormTwo = ({ handleSubmit, previousPage }) => (
         />
       </div>
     </div>
+    <div className="form__form-group">
+      <span className="form__form-group-label">Début du projet</span>
+      <div className="form__form-group-field">
+        <Field
+          name="start"
+          component="input"
+          type="date"
+        />
+      </div>
+    </div>
+    <div className="form__form-group">
+      <span className="form__form-group-label">Fin du projet</span>
+      <div className="form__form-group-field">
+        <Field
+          name="end"
+          component="input"
+          type="date"
+        />
+      </div>
+    </div>
     <ButtonToolbar className="form__button-toolbar wizard__toolbar">
       <Button color="primary" type="button" className="previous" onClick={previousPage}>Retour</Button>
       <Button color="primary" type="submit" className="next">Suivant</Button>
