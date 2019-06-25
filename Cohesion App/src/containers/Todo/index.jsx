@@ -48,7 +48,7 @@ class Todo extends Component {
       <Container className="todo-app">
         <Row>
           <Col md={12}>
-            <h3 className="page-title">{t('Maison des Safer - GIE SIIIS')}</h3>
+            <h3 className="page-title">{t('Chatbot de recommandation')}</h3>
           </Col>
         </Row>
         <Row>
@@ -57,7 +57,7 @@ class Todo extends Component {
             <Col md={12}>
               <div className="todo-app__divider">
                 <div className="todo-app__divider-line" />
-                <p className="todo-app__divider-title">Done</p>
+                <p className="todo-app__divider-title">Terminé</p>
                 <div className="todo-app__divider-line" />
               </div>
             </Col>

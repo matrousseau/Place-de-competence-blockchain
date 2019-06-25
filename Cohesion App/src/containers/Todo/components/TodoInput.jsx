@@ -9,9 +9,9 @@ import classNames from 'classnames';
 import { ThemeProps } from '../../../shared/prop-types/ReducerProps';
 
 const priorityOptions = [
-  { value: 'high', label: 'High' },
-  { value: 'medium', label: 'Medium' },
-  { value: 'low', label: 'Low' },
+  { value: 'high', label: 'Haute' },
+  { value: 'medium', label: 'Moyenne' },
+  { value: 'low', label: 'Faible' },
 ];
 
 const todoSidebarImg = `${process.env.PUBLIC_URL}/img/sidebar_img.svg`;
@@ -93,9 +93,9 @@ class TodoInput extends Component {
       <div className="todo__input-new">
         <div className="todo__sidebar">
           <img className="todo_sidebar-image" src={todoSidebarImg} alt="sidebar-img" />
-          <Button className="todo__btn-add-new" onClick={this.toggle}><PlusIcon /> New task</Button>
+          <Button className="todo__btn-add-new" onClick={this.toggle}><PlusIcon /> Nouvelle tâche</Button>
           <div className="todo__date-filter">
-            <p className="title">Status</p>
+            <p className="title">Statut </p>
             <ul className="todo__date-filter-list">
               <li>
                 <input
@@ -105,7 +105,7 @@ class TodoInput extends Component {
                   name="date-filter"
                   value="all-tasks"
                 />
-                <label htmlFor="all-tasks">All tasks</label>
+                <label htmlFor="all-tasks">Toutes les tâches</label>
               </li>
               <li>
                 <input
@@ -115,7 +115,7 @@ class TodoInput extends Component {
                   name="date-filter"
                   value="pedning-tasks"
                 />
-                <label htmlFor="pedning-tasks">Pending tasks</label>
+                <label htmlFor="pedning-tasks">Tâches en cours</label>
               </li>
               <li>
                 <input
@@ -125,7 +125,7 @@ class TodoInput extends Component {
                   name="date-filter"
                   value="completed-tasks"
                 />
-                <label htmlFor="completed-tasks">Completed tasks</label>
+                <label htmlFor="completed-tasks">Tâches terminées</label>
               </li>
             </ul>
           </div>
@@ -142,7 +142,7 @@ class TodoInput extends Component {
                   onClick={this.handlePriorityFilterChange.bind(this)}
                   defaultChecked
                 />
-                <label htmlFor="priority-all">All</label>
+                <label htmlFor="priority-all">Tout</label>
               </li>
               <li>
                 <input
@@ -153,7 +153,7 @@ class TodoInput extends Component {
                   value="low"
                   onClick={this.handlePriorityFilterChange.bind(this)}
                 />
-                <label htmlFor="priority-low">Low</label>
+                <label htmlFor="priority-low">Faible</label>
               </li>
               <li>
                 <input
@@ -164,7 +164,7 @@ class TodoInput extends Component {
                   value="medium"
                   onClick={this.handlePriorityFilterChange.bind(this)}
                 />
-                <label htmlFor="priority-medium">Medium</label>
+                <label htmlFor="priority-medium">Moyenne</label>
               </li>
               <li>
                 <input
@@ -175,7 +175,7 @@ class TodoInput extends Component {
                   value="high"
                   onClick={this.handlePriorityFilterChange.bind(this)}
                 />
-                <label htmlFor="priority-high">High</label>
+                <label htmlFor="priority-high">Importante</label>
               </li>
             </ul>
           </div>
@@ -187,7 +187,7 @@ class TodoInput extends Component {
         >
           <div className="form">
             <div className="form__form-group">
-              <span className="form__form-group-label">Title</span>
+              <span className="form__form-group-label">Titre</span>
               <div className="form__form-group-field">
                 <input
                   type="text"
@@ -213,7 +213,7 @@ class TodoInput extends Component {
             </div>
 
             <div className="form__form-group">
-              <span className="form__form-group-label">Priority</span>
+              <span className="form__form-group-label">Urgent</span>
               <div className="form__form-group-field priority">
                 <Select
                   options={priorityOptions}
@@ -225,8 +225,8 @@ class TodoInput extends Component {
 
 
             <ButtonToolbar className="form__button-toolbar">
-              <Button color="primary" type="submit" onClick={this.handleSubmit}>Add</Button>
-              <Button type="button" onClick={this.toggle}>Cancel</Button>
+              <Button color="primary" type="submit" onClick={this.handleSubmit}>Ajout</Button>
+              <Button type="button" onClick={this.toggle}>Retour</Button>
             </ButtonToolbar>
           </div>
         </Modal>

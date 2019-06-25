@@ -1,42 +1,39 @@
 const initialState = {
   todos: [{
     id: 213,
-    title: 'Create the main page design',
-    description: 'Eldest father can design tastes did joy settle. Roused future he ye an marked. Arose mr rapid '
-      + 'in so vexed words. Gay welcome led add lasting chiefly say looking. ',
-    completed: false,
+    title: 'Collecter des données',
+    description: "Récupération de différentes sources d'articles pour le système de recommandation.",
+    completed: true,
     priority: 'high',
   },
   {
-    id: 214,
-    title: 'Write to Sarah',
-    description: 'Eldest father can design tastes did joy settle. Roused future he ye an marked. Arose mr rapid '
-        + 'in so vexed words. Gay welcome led add lasting chiefly say looking. ',
-    completed: false,
+    id: 215,
+    title: 'Scrapping',
+    description: 'Déployement de la solution de scrapping pour récupérer les différents articles. ',
+    completed: true,
     priority: 'low',
   },
   {
-    id: 215,
-    title: 'Make a mind-map',
-    description: 'Eldest father can design tastes did joy settle. Roused future he ye an marked. Arose mr rapid '
-        + 'in so vexed words. Gay welcome led add lasting chiefly say looking. ',
+    id: 214,
+    title: 'NLP',
+    description: "Entrainement de l'algorithme de NLP pour classifier les articles "
+    + 'selon les préférences des utilisateurs.',
     completed: false,
     priority: 'medium',
   },
   {
     id: 216,
-    title: 'Write a text',
-    description: 'Eldest father can design tastes did joy settle. Roused future he ye an marked. Arose mr rapid '
-        + 'in so vexed words. Gay welcome led add lasting chiefly say looking. ',
-    completed: true,
+    title: 'Mise en production',
+    description: "Mise en production de l'algortihme entrainé.",
+    completed: false,
     priority: 'low',
   },
   {
     id: 217,
-    title: 'Make a blog post about marketing',
-    description: 'Eldest father can design tastes did joy settle. Roused future he ye an marked. Arose mr rapid '
-        + 'in so vexed words. Gay welcome led add lasting chiefly say looking. ',
-    completed: true,
+    title: 'Création du chatbot',
+    description: "Choix d'une solution de chatbot et configuration de "
+        + " la solution + implémentation de l'algorithme de classification",
+    completed: false,
     priority: 'low',
   }],
   priorityFilter: '',

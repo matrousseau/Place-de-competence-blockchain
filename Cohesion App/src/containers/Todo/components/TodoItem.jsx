@@ -116,8 +116,8 @@ class TodoItem extends Component {
             <div className="todo__header">
               <h3>{title}</h3>
               <div className="todo__additional">
-                <p className="todo__due-date">Due date: 22.05.19</p>
-                <span className="todo__priority">Priority:</span>
+                <p className="todo__due-date">Date de rendu : 22.06.19</p>
+                <span className="todo__priority">Priorité:</span>
                 <span className={priorityColorsClass} />
               </div>
             </div>
