@@ -10,6 +10,7 @@ import Divider from '@material-ui/core/Divider';
 import Summary from './Summary';
 import Summary4 from './Summary.4';
 import Summary5 from './Summary.5';
+import Summary6 from './Summary.6';
 
 const API = 'http://localhost:8919/api/cohesion.mission.Mission';
 
@@ -91,6 +92,9 @@ class JustifyTabsBorderedTop extends PureComponent {
                 <TabContent activeTab={activeTab}>
                   <TabPane tabId="1">
                     <Divider />
+                    <ul>
+                      <Summary6 />
+                    </ul>
                     <ul>
                       {this.renderTitle()}
                     </ul>
