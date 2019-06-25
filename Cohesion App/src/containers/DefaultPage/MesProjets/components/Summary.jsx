@@ -17,9 +17,6 @@ const Summary = ({
           <div className="card__title">
             <h5 className="bold-text">{ title }</h5>
           </div>
-          <div>
-            <Button className="project-summary__btn" outline size="sm"><a href="/todo">Plus de détails...</a></Button>
-          </div>
           <table className="project-summary__info">
             <tbody>
               <tr>
@@ -60,11 +57,14 @@ const Summary = ({
             <div className="project-summary__stat">
               <p>{ nombre } <span>Expert(s) demandé(s)</span></p>
             </div>
-            <div className="project-summary__progress progress-wrap progress-wrap--middle">
-              <Button outline size="sm"><a href="/tables/table_expert">Trouver un expert...</a></Button>
-            </div>
           </div>
           {/* <Statistics /> */}
+          <div className="project-summary__progress progress-wrap progress-wrap">
+            <Button outline size="sm"><a href="/tables/table_expert">Trouver un expert...</a></Button>
+          </div>
+          <div>
+            <Button outline size="sm"><a href="/todo">Plus de détails...</a></Button>
+          </div>
         </div>
       </CardBody>
       <Divider />

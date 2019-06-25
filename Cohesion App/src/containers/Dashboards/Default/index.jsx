@@ -7,18 +7,12 @@ import TotalPageViews from './components/TotalPageViews';
 import NewUsers from './components/NewUsers';
 import BounceRate from './components/BounceRate';
 import ABTestingAnalytics from './components/ABTestingAnalytics';
-import SalesStatistic from './components/SalesStatistic';
-import VisitorsSessions from './components/VisitorsSessions';
-import BounceRateArea from './components/BounceRateArea';
-import AudienceByCountry from './components/AudienceByCountry';
-import BudgetStatistic from './components/BudgetStatistic';
-import GoalsCompletion from './components/GoalsCompletion';
 
 const DefaultDashboard = ({ t }) => (
   <Container className="dashboard">
     <Row>
       <Col md={12}>
-        <h3 className="page-title">{t('Map des compétences')}</h3>
+        <h3 className="page-title">{t('Mon entité')}</h3>
       </Col>
     </Row>
     <Row>
@@ -29,12 +23,6 @@ const DefaultDashboard = ({ t }) => (
     </Row>
     <Row>
       <ABTestingAnalytics />
-      <BounceRateArea />
-      <VisitorsSessions />
-      <SalesStatistic />
-      <BudgetStatistic />
-      <AudienceByCountry />
-      <GoalsCompletion />
     </Row>
   </Container>
 );

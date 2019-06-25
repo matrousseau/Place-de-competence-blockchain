@@ -4,7 +4,6 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 import Divider from '@material-ui/core/Divider';
-import Statistics from './Statistics';
 import {
   Card, CardBody, Col, Button,
 } from 'reactstrap';
@@ -16,9 +15,6 @@ const Summary = () => (
         <div className="project-summary">
           <div className="card__title">
             <h5 className="bold-text">Chatbot de recommandation</h5>
-          </div>
-          <div>
-            <Button className="project-summary__btn" outline size="sm"><a href="/todo">Plus de détails...</a></Button>
           </div>
           <table className="project-summary__info">
             <tbody>
@@ -46,11 +42,16 @@ const Summary = () => (
             </tbody>
           </table>
           <div className="project-summary__stats">
-            {/* <div className="project-summary__stat">
-              <p>6 <span>Tâches</span></p>
-            </div> */}
+            <div className="project-summary__stat">
+              <p>2 <span>Expert(s) demandé(s)</span></p>
+            </div>
           </div>
-          <Statistics />
+          <div className="project-summary__progress progress-wrap progress-wrap">
+            <Button outline size="sm"><a href="/tables/table_expert">Trouver un expert...</a></Button>
+          </div>
+          <div>
+            <Button outline size="sm"><a href="/todo">Plus de détails...</a></Button>
+          </div>
         </div>
       </CardBody>
       <Divider />

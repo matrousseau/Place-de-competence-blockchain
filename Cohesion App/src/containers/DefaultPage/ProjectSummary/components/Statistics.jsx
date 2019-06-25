@@ -4,19 +4,16 @@ import {
 } from 'recharts';
 import LoadingIcon from 'mdi-react/LoadingIcon';
 
-const data01 = [{ name: 'React/Redux', value: 40, fill: '#4ce1b6' },
-  { name: 'AWS', value: 175, fill: '#70bbfd' },
-  { name: 'Architecture', value: 70, fill: '#ff4861' },
-  { name: 'Machine Learning', value: 70, fill: '#7e6bc9' }];
+const data01 = [{ name: 'Communication', value: 50, fill: '#4ce1b6' },
+  { name: 'Marketing', value: 25, fill: '#70bbfd' },
+  { name: 'HTML', value: 25, fill: '#ff4861' }];
 
 const data012 = [{ name: 'React/Redux', value: 40, fill: '#4ce1b6' },
   { name: 'AWS', value: 175, fill: '#70bbfd' },
   { name: 'Machine Learning', value: 70, fill: '#7e6bc9' }];
 
-const data02 = [{ name: 'React/Redux', value: 40, fill: '#4ce1b6' },
-  { name: 'AWS', value: 175, fill: '#70bbfd' },
-  { name: 'Architecture', value: 70, fill: '#ff4861' },
-  { name: 'Machine Learning', value: 70, fill: '#7e6bc9' }];
+const data02 = [{ name: 'Communication', value: 50, fill: '#4ce1b6' },
+  { name: 'Marketing', value: 50, fill: '#70bbfd' }];
 
 const data022 = [{ name: 'React/Redux', value: 40, fill: '#4ce1b6' },
   { name: 'AWS', value: 175, fill: '#70bbfd' },

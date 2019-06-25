@@ -6,7 +6,6 @@ import {
 } from 'recharts';
 import TrendingUpIcon from 'mdi-react/TrendingUpIcon';
 import { withTranslation } from 'react-i18next';
-import PropTypes from 'prop-types';
 
 const data = [
   { name: 'Page A', pv: 25 },
@@ -22,10 +21,6 @@ const data = [
 ];
 
 class BounceRate extends PureComponent {
-  static propTypes = {
-    t: PropTypes.func.isRequired,
-  };
-
   constructor() {
     super();
     this.state = {
@@ -42,14 +37,13 @@ class BounceRate extends PureComponent {
   render() {
     const { activeIndex } = this.state;
     const activeItem = data[activeIndex];
-    const { t } = this.props;
 
     return (
       <Col md={12} xl={3} lg={6} xs={12}>
         <Card>
           <CardBody className="dashboard__card-widget">
             <div className="card__title">
-              <h5 className="bold-text">{t('dashboard_default.bounce_rate')}</h5>
+              <h5 className="bold-text">Compétences</h5>
             </div>
             <div className="dashboard__total">
               <TrendingUpIcon className="dashboard__trend-icon" />
